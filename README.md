@@ -26,6 +26,7 @@ get your own APP_ID and APP_KEY and write it in .env file
 
 last thing install the dependencies in the root folder : 
 > npm install 
+
 > npm start 
 
 
