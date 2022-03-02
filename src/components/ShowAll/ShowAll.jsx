@@ -8,7 +8,7 @@ const ShowAll = () => {
       className="text-center category-link hover:scale-110"
     >
       <div className="">
-        <img src="img/view-all.jpg" alt="View All" className="rounded mb-4" />
+        <img src="img/view-all.jpg" alt="View All" className="mb-4 rounded" />
       </div>
       <div className="font-bold">View ALL</div>
     </Link>

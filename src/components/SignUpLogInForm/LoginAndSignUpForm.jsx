@@ -10,7 +10,7 @@ const LoginForm = ({ popup, setPopup }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState(null);
-  const { signup, login, currentUser } = useAuth();
+  const { signup, login } = useAuth();
 
   const handleSignUpSubmit = async (e) => {
     e.preventDefault();

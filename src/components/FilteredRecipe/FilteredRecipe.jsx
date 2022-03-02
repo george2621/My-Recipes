@@ -1,22 +1,22 @@
 import React from "react";
-import { filter } from "./filter";
+import { filters } from "./filter";
 
 const FilteredRecipe = ({ selectedFilter, handleFilter }) => {
   return (
-    <div className="my-24 px-20 text-center">
-      <h1 className="text-4xl mb-2">Recipes</h1>
-      <h4 className="cooking font-bold mb-6">GET COOKING & SHARING</h4>
-      <div className="flex flex-wrap justify-center items-center">
+    <div className="px-20 mt-24 mb-10 text-center">
+      <h1 className="mb-2 text-4xl">Recipes</h1>
+      <h4 className="mb-6 font-bold cooking">GET COOKING & SHARING</h4>
+      <div className="flex flex-wrap items-center justify-center">
         <p className="mr-4">FILTER BY:</p>
-        {filter.map((item, index) => (
+        {filters.map((filter) => (
           <button
-            key={index}
+            key={filter.id}
             className={`filter-button hover:bg-blue-700 text-white font-bold py-1 px-4 mx-1 rounded my-2 ${
-              selectedFilter === item ? "selected-category" : ""
+              selectedFilter === filter.filterName ? "selected-category" : ""
             }`}
-            onClick={() => handleFilter(item)}
+            onClick={() => handleFilter(filter.filterName)}
           >
-            {item}
+            {filter.filterName}
           </button>
         ))}
       </div>

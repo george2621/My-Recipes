@@ -1,40 +1,41 @@
 import React from "react";
 import Login from "../Login/Login";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
     <div className="text-center">
-      <nav className="main-nav flex justify-between  flex-wrap p-5 lg:px-40">
-        <div className="flex items-center flex-shrink-0 text-white mr-6">
-          <span className="font-semibold text-xl tracking-tight">
+      <nav className="flex flex-wrap justify-between p-5 main-nav lg:px-40">
+        <div className="flex items-center flex-shrink-0 mr-6 text-white">
+          <span className="text-xl font-semibold tracking-tight">
             My Recipes
           </span>
         </div>
-        <div className="text-md items-center flex">
-          <a
-            href="/"
-            className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+        <div className="flex items-center text-md">
+          <Link
+            to="/"
+            className="block mt-4 mr-4 text-teal-200 lg:inline-block lg:mt-0 hover:text-white"
           >
             Home
-          </a>
-          <a
-            href="/"
-            className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+          </Link>
+          <Link
+            to="/"
+            className="block mt-4 mr-4 text-teal-200 lg:inline-block lg:mt-0 hover:text-white"
           >
             About
-          </a>
-          <a
-            href="/categories"
-            className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+          </Link>
+          <Link
+            to="/categories"
+            className="block mt-4 mr-4 text-teal-200 lg:inline-block lg:mt-0 hover:text-white"
           >
             Categories
-          </a>
-          <a
-            href="/"
-            className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
+          </Link>
+          <Link
+            to="/favorites"
+            className="block mt-4 text-teal-200 lg:inline-block lg:mt-0 hover:text-white"
           >
             Favorites
-          </a>
+          </Link>
         </div>
         <Login />
       </nav>

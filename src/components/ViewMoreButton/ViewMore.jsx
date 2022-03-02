@@ -2,10 +2,10 @@ import React from "react";
 
 const ViewMore = ({ ViewMoreRecipes }) => {
   return (
-    <div className="text-center mb-20">
+    <div className="mb-20 text-center">
       <button
         onClick={() => ViewMoreRecipes()}
-        className="view-more bg-transparent text-blue-700 font-semibold py-2 px-12 border hover:border-transparent"
+        className="px-12 py-2 font-semibold text-blue-700 bg-transparent border view-more hover:border-transparent"
       >
         View More
       </button>

@@ -8,11 +8,11 @@ const CategoryItem = ({ category }) => {
       to={`/categories/${category.name}`}
       className="text-center category-link hover:scale-110"
     >
-      <div className="">
+      <div>
         <img
           src={category.image}
           alt={category.name}
-          className="category-img rounded object-cover  mb-4"
+          className="object-cover mb-4 rounded category-img"
         />
       </div>
       <div className="font-bold">{category.name}</div>

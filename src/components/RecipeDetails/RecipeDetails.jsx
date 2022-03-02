@@ -3,9 +3,11 @@ import Breadcrumb from "../Breadcrumb/Breadcrumb";
 import { BsFillTagFill } from "react-icons/bs";
 import RecipeNutrition from "./RecipesNutrition";
 import RecipeIngredients from "./RecipeIngredients";
+import RecipeFavButton from "./RecipeFavButton";
+import Loading from "../Loading/Loading";
 
 const ProductDetails = ({ uri }) => {
-  const [recipe, setRecipe] = useState({});
+  const [recipe, setRecipe] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -26,7 +28,7 @@ const ProductDetails = ({ uri }) => {
   }, [url]);
 
   if (loading) {
-    return <h1>Loading...</h1>;
+    return <Loading />;
   } else if (error) {
     return <h2>{error}</h2>;
   } else
@@ -36,21 +38,22 @@ const ProductDetails = ({ uri }) => {
           recipeName={[recipe][0].recipe.label}
           className="mt-24 mb-4"
         />
-        <div className="grid grid-cols-1 lg:grid-cols-3  mt-10 px-8 lg:px-20">
+        <div className="grid grid-cols-1 px-8 mt-10 lg:grid-cols-3 lg:px-20">
           <div className="mx-auto">
             <img
               src={[recipe][0].recipe.image}
               alt={[recipe][0].recipe.label}
               className="img-details"
             />
+            <RecipeFavButton uri={uri} />
           </div>
-          <div className="col-span-2  lg:px-12">
+          <div className="col-span-2 lg:px-12">
             <p className="text-4xl">{[recipe][0].recipe.label}</p>
-            <div className="text-nav flex items-center">
+            <div className="flex items-center text-nav">
               <BsFillTagFill style={{ fontSize: "20px" }} />
-              <p className="text-xl ml-2 ">{[recipe][0].recipe.cuisineType}</p>
+              <p className="ml-2 text-xl ">{[recipe][0].recipe.cuisineType}</p>
             </div>
-            <div className="line mt-2"></div>
+            <div className="mt-2 line"></div>
             <div className="flex mt-2">
               <p className="meal-type">
                 Meal Type <span>{[recipe][0].recipe.mealType} </span>
@@ -59,9 +62,9 @@ const ProductDetails = ({ uri }) => {
                 &nbsp;Dish Type <span>{[recipe][0].recipe.dishType}</span>
               </p>
             </div>
-            <div className="line mt-2"></div>
+            <div className="mt-2 line"></div>
             <RecipeNutrition nutrition={[recipe][0].recipe.totalNutrients} />
-            <div className="line mt-4"></div>
+            <div className="mt-4 line"></div>
             <RecipeIngredients
               ingredients={[recipe][0].recipe.ingredientLines}
             />
