@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Rubik:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Rubik:wght@300;500&display=swap");
 body {
   font-family: "Montserrat", serif;
   /* background-image: url("../public/img/i-like-food.svg"); */
@@ -7,6 +7,7 @@ body {
 
 .main-nav {
   background: #62a5a1;
+  border-bottom: #a3865b 2px solid;
 }
 
 .login,
@@ -115,10 +116,26 @@ body {
   background: #62a5a1;
 }
 
-.login-btn {
+.login-btn,
+.save {
   background: #62a5a1;
 }
 
 .forget {
   color: #62a5a1;
+}
+
+.saved {
+  color: #fff;
+  background: #a3865b;
+}
+
+.custom-toast,
+.footer {
+  background: #62a5a1;
+}
+
+.loading {
+  width: 100px;
+  height: 100px;
 }

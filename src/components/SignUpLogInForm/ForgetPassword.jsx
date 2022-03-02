@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ForgetPassword = () => {
   return (
@@ -17,10 +18,10 @@ const ForgetPassword = () => {
       </div>
 
       <div class="text-sm">
-        <a href="/" class="forget font-medium ">
+        <Link to="/" class="forget font-medium ">
           {" "}
           Forgot your password?{" "}
-        </a>
+        </Link>
       </div>
     </div>
   );

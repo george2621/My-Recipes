@@ -1,30 +1,31 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="grid grid-cols-1 items-center lg:grid-cols-2 pt-12">
+    <div className="grid items-center grid-cols-1 pt-12 lg:grid-cols-2">
       <div className="lg:px-20 md:px-10">
-        <h1 className="text-6xl mb-5">
+        <h1 className="mb-5 text-6xl">
           Huge selection of delicious recipe ideas
         </h1>
-        <p className="leading-8	font-light text-2xl mb-5">
+        <p className="mb-5 text-2xl font-light leading-8">
           Explore our huge selection of delicious recipe ideas including; easy
           desserts, delicious vegan and vegetarian dinner ideas, gorgeous pasta
           recipes, quick bakes, family-friendly meals and gluten-free recipes.
         </p>
-        <div className="flex lg:justify-start  md:justify-center flex-col sm:flex-row mt-5">
-          <a
-            href="/explore-latest"
-            className="bg-black text-white font-bold py-3 px-5 m-3 rounded text-center"
+        <div className="flex flex-col mt-5 lg:justify-start md:justify-center sm:flex-row">
+          <Link
+            to="/"
+            className="px-5 py-3 m-3 font-bold text-center text-white bg-black rounded"
           >
             Explore Latest
-          </a>
-          <a
-            href="/explore-random"
-            className="hover:bg-black hover:text-white text-light border border-slate-500 m-3 font-bold py-3 px-5 text-center rounded"
+          </Link>
+          <Link
+            to="/"
+            className="px-5 py-3 m-3 font-bold text-center border rounded hover:bg-black hover:text-white text-light border-slate-500"
           >
             Show Random
-          </a>
+          </Link>
         </div>
       </div>
       <div className="m-auto">
