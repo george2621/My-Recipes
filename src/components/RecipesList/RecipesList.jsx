@@ -4,17 +4,30 @@ import Loading from "../Loading/Loading.jsx";
 import RecipeItem from "../RecipeItem/RecipeItem";
 import ViewMore from "../ViewMoreButton/ViewMore.jsx";
 
-const RecipesList = ({ category, selectedFilter }) => {
+const RecipesList = ({ selectedCategory, selectedFilter, selectedSort }) => {
   const [range, setRange] = useState(16);
 
   const ViewMoreRecipes = () => {
     setRange(range + 8);
   };
 
-  let url = `https://api.edamam.com/search?q&app_id=77aa9220&app_key=0308e0fb57a38dfce56f6cdff2845a7a&cuisineType=${category}&from=0&to=${range}`;
+  console.log(process.env);
+  let url = `https://api.edamam.com/search?q&app_id=${process.env.REACT_APP_APP_ID}&app_key=${process.env.REACT_APP_APP_KEY}&cuisineType=${selectedCategory}&from=0&to=${range}`;
+
   if (selectedFilter) {
-    url = `https://api.edamam.com/search?q=${selectedFilter}&app_id=77aa9220&app_key=0308e0fb57a38dfce56f6cdff2845a7a&from=0&to=${range}`;
+    url = `https://api.edamam.com/search?q=${selectedFilter}&app_id=${process.env.REACT_APP_APP_ID}&app_key=${process.env.REACT_APP_APP_KEY}&from=0&to=${range}`;
   }
+  if (selectedSort === "Random Recipes") {
+    url = `https://api.edamam.com/search?q=popular&app_id=${
+      process.env.REACT_APP_APP_ID
+    }&app_key=${process.env.REACT_APP_APP_KEY}&from=30&to=${30 + range}`;
+  }
+  if (selectedSort === "Latest Recipes") {
+    url = `https://api.edamam.com/search?q=latest&app_id=${process.env.REACT_APP_APP_ID}&app_key=${process.env.REACT_APP_APP_KEY}&from=0&to=${range}`;
+  }
+
+  console.log(selectedSort);
+
   const { data, error, loading } = useFetch(url, range);
 
   if (loading) {
@@ -24,7 +37,7 @@ const RecipesList = ({ category, selectedFilter }) => {
   } else
     return (
       <>
-        <div className="grid grid-cols-1 px-20 mt-10 recipes md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 px-5 mt-10 lg:px-20 md:px-10 recipes md:grid-cols-2 lg:grid-cols-4">
           {data.hits.map((recipe) => (
             <RecipeItem
               key={recipe.recipe.uri.slice(51)}
@@ -34,9 +47,7 @@ const RecipesList = ({ category, selectedFilter }) => {
             />
           ))}
         </div>
-        {(selectedFilter || category) && (
-          <ViewMore ViewMoreRecipes={ViewMoreRecipes} />
-        )}
+        {data && <ViewMore ViewMoreRecipes={ViewMoreRecipes} />}
       </>
     );
 };

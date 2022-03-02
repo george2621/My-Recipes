@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Breadcrumb = ({ category, recipeName }) => {
+const Breadcrumb = ({ category, pageName }) => {
   return (
-    <nav className="flex px-10" aria-label="Breadcrumb">
+    <nav className="flex px-5 lg:px-20 md:px-10" aria-label="Breadcrumb">
       <ol className="inline-flex items-center space-x-1 md:space-x-3">
         <li className="inline-flex items-center">
           <Link
@@ -21,7 +21,7 @@ const Breadcrumb = ({ category, recipeName }) => {
             Home
           </Link>
         </li>
-        {recipeName && (
+        {pageName && (
           <li>
             <div className="flex items-center">
               <svg
@@ -37,7 +37,7 @@ const Breadcrumb = ({ category, recipeName }) => {
                 ></path>
               </svg>
               <span className="ml-1 text-lg font-medium text-gray-400 md:ml-2 dark:text-gray-500">
-                {recipeName}
+                {pageName}
               </span>
             </div>
           </li>
@@ -66,7 +66,7 @@ const Breadcrumb = ({ category, recipeName }) => {
             </div>
           </li>
         )}
-        {!recipeName && (
+        {!pageName && (
           <li aria-current="page">
             <div className="flex items-center">
               <svg

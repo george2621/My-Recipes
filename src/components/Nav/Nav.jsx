@@ -7,8 +7,8 @@ const Nav = () => {
     <div className="text-center">
       <nav className="flex flex-wrap justify-between p-5 main-nav lg:px-40">
         <div className="flex items-center flex-shrink-0 mr-6 text-white">
-          <span className="text-xl font-semibold tracking-tight">
-            My Recipes
+          <span className="text-2xl font-semibold tracking-tight">
+            MY RECIPES
           </span>
         </div>
         <div className="flex items-center text-md">
@@ -17,12 +17,6 @@ const Nav = () => {
             className="block mt-4 mr-4 text-teal-200 lg:inline-block lg:mt-0 hover:text-white"
           >
             Home
-          </Link>
-          <Link
-            to="/"
-            className="block mt-4 mr-4 text-teal-200 lg:inline-block lg:mt-0 hover:text-white"
-          >
-            About
           </Link>
           <Link
             to="/categories"

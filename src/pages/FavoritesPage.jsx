@@ -4,6 +4,7 @@ import FavoritesContext from "../context/FavoritesContext";
 import RecipeItem from "../components/RecipeItem/RecipeItem";
 import Footer from "../components/Footer/Footer";
 import Loading from "../components/Loading/Loading";
+import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 
 const FavoritesPage = () => {
   const { favorites } = useContext(FavoritesContext);
@@ -42,9 +43,12 @@ const FavoritesPage = () => {
   return (
     <>
       <Nav />
-      <h1 className="px-10 mt-12 mb-4 text-5xl">Favorites Recipes</h1>
+      <h1 className="px-5 mt-12 mb-4 text-5xl lg:px-20 md:px-10">
+        Favorites Recipes
+      </h1>
+      <Breadcrumb pageName={"Favorites"} />
       {favoriteList.length > 0 ? (
-        <div className="grid h-screen grid-cols-1 px-20 mt-10 recipes md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 mt-10 recipes md:grid-cols-2 lg:grid-cols-4">
           {favoriteList.map((fav) => (
             <RecipeItem
               key={[fav][0].recipe.uri.slice(51)}
@@ -55,7 +59,7 @@ const FavoritesPage = () => {
           ))}
         </div>
       ) : (
-        <div className="flex items-center justify-center h-screen no-favorites">
+        <div className="flex items-center justify-center main no-favorites">
           <h1>There is no favorites recipes...</h1>
         </div>
       )}

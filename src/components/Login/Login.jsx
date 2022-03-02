@@ -21,7 +21,7 @@ const Login = () => {
   ) : (
     <div
       onClick={logout}
-      className="flex items-center px-5 py-2 mt-4 text-sm leading-none text-white rounded cursor-pointer logout hover:text-fuchsia-900 lg:mt-0"
+      className="flex items-center px-5 py-2 mt-4 text-sm leading-none text-white rounded cursor-pointer logout hover:opacity-80 lg:mt-0"
     >
       <BsPersonCircle style={{ fontSize: "25px", color: "#fff" }} />
       <p className="ml-2">Log out</p>

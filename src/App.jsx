@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import FavoritesPage from "./pages/FavoritesPage";
 import { FavoriteContextProvider } from "./context/FavoritesContext";
+import RandomRecipes from "./pages/RandomRecipes";
+import LatestRecipes from "./pages/LatestRecipes";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
             <Route path="/categories/:name" element={<CategoryPage />} />
             <Route path="/recipe/:uri" element={<RecipeDetailsPage />} />
             <Route path="/favorites" element={<FavoritesPage />} />
+            <Route path="/random" element={<RandomRecipes />} />
+            <Route path="/latest" element={<LatestRecipes />} />
           </Routes>
         </Router>
       </AuthProvider>

@@ -3,7 +3,7 @@ import { filters } from "./filter";
 
 const FilteredRecipe = ({ selectedFilter, handleFilter }) => {
   return (
-    <div className="px-20 mt-24 mb-10 text-center">
+    <div className="px-5 mt-24 mb-10 text-center lg:px-20 md:px-10">
       <h1 className="mb-2 text-4xl">Recipes</h1>
       <h4 className="mb-6 font-bold cooking">GET COOKING & SHARING</h4>
       <div className="flex flex-wrap items-center justify-center">
