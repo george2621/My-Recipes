@@ -19,7 +19,7 @@ const HomePage = () => {
   };
 
   return (
-    <div>
+    <>
       <Nav />
       <Header />
       <CategoriesList length={5} />
@@ -33,7 +33,7 @@ const HomePage = () => {
       />
       <RecipesList selectedFilter={selectedFilter} />
       <Footer />
-    </div>
+    </>
   );
 };
 

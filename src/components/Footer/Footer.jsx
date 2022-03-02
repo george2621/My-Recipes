@@ -12,7 +12,7 @@ const Footer = () => {
         <p>© 2022 GEORGE ROUMIEH ENTERPRISES LIMITED</p>
       </div>
       <div>
-        <ul className="flex flex-wrap mx-3">
+        <ul className="flex flex-wrap justify-center mx-3">
           <li className="mx-2 cursor-pointer hover:text-black">TERMS OF USE</li>
           <li className="mx-2 cursor-pointer hover:text-black">
             PRIVACY POLICY
@@ -23,7 +23,7 @@ const Footer = () => {
         </ul>
       </div>
       <div>
-        <ul className="flex mx-3">
+        <ul className="flex mx-3 ">
           <li className="mx-2 cursor-pointer hover:text-black">
             <AiFillFacebook style={{ fontSize: "25px" }} />
           </li>

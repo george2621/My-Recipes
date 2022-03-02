@@ -42,12 +42,12 @@ const LoginForm = ({ popup, setPopup }) => {
   return (
     popup.length > 0 && (
       <div className="popup">
-        <div class="popup-inner  flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-          <div class="max-w-md w-full space-y-8">
+        <div className="flex items-center justify-center px-4 py-12 mx-4 popup-inner sm:px-6 lg:px-8">
+          <div className="w-full max-w-md space-y-8">
             <LoginSignupHeader popup={popup} />
             {/* {currentUser && <p className="text-red-600">{currentUser.email}</p>} */}
             <form
-              class="mt-8 space-y-6"
+              className="mt-8 space-y-6"
               onSubmit={
                 popup === "Signup" ? handleSignUpSubmit : handleLogInSubmit
               }

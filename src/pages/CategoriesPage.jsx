@@ -7,13 +7,13 @@ import Footer from "../components/Footer/Footer.jsx";
 
 const CategoryPage = () => {
   return (
-    <div>
+    <>
       <Nav />
       <h1 className="px-10 mt-12 mb-4 text-5xl">All Categories</h1>
       <Breadcrumb />
       <CategoriesList length={categories.length} />
       <Footer />
-    </div>
+    </>
   );
 };
 

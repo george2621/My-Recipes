@@ -32,7 +32,7 @@ const RecipeFavButton = ({ uri }) => {
         onClick={() => addToFavorites(uri)}
         className={`${
           isFavorites(uri) ? "saved" : "save "
-        } mt-2 flex items-center rounded px-2 py-1 text-white hover:opacity-80`}
+        } mt-2 flex items-center rounded px-2 py-1 text-white hover:opacity-80 mb-3`}
       >
         {isFavorites(uri) ? (
           <AiFillStar

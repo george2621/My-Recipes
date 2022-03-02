@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Rubik:wght@300;500&display=swap");
 body {
   font-family: "Montserrat", serif;
-  /* background-image: url("../public/img/i-like-food.svg"); */
   background-color: #f8f8f8;
 }
 
@@ -32,16 +31,19 @@ body {
   background: #b6b6b6;
 }
 
-.filter-button:hover {
+.filter-button:hover,
+.selected-category,
+.view-more:hover,
+.close-Button,
+.login-btn,
+.save,
+.custom-toast,
+.footer {
   background: #62a5a1;
 }
 
 .cooking {
   color: #a3865b;
-}
-
-.selected-category {
-  background: #62a5a1;
 }
 
 .recipe-img {
@@ -55,7 +57,6 @@ body {
 
 .view-more:hover {
   color: #fff;
-  background: #62a5a1;
 }
 
 .item {
@@ -113,12 +114,6 @@ body {
   top: 0;
   right: 16px;
   font-weight: bold;
-  background: #62a5a1;
-}
-
-.login-btn,
-.save {
-  background: #62a5a1;
 }
 
 .forget {
@@ -130,12 +125,11 @@ body {
   background: #a3865b;
 }
 
-.custom-toast,
-.footer {
-  background: #62a5a1;
-}
-
 .loading {
   width: 100px;
   height: 100px;
+}
+
+.main {
+  height: calc(100vh - 284px);
 }

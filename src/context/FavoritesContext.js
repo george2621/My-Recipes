@@ -13,7 +13,6 @@ export const FavoriteContextProvider = ({ children }) => {
     const newFavorites = favorites.filter((favorite) => favorite !== id);
     if (newFavorites.length === favorites.length) {
       setFavorites([...newFavorites, id]);
-      console.log(favorites);
     } else {
       setFavorites(newFavorites);
     }

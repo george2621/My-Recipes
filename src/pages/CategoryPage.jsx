@@ -9,13 +9,15 @@ const CategoryPage = () => {
   const { name } = useParams();
 
   return (
-    <div>
+    <>
       <Nav />
-      <h1 className="px-10 mt-12 mb-4 text-5xl">{name} Food</h1>
+      <h1 className="px-5 mt-12 mb-4 text-5xl lg:px-20 md:px-10">
+        {name} Food
+      </h1>
       <Breadcrumb category={name} />
-      <RecipesList category={name} />
+      <RecipesList selectedCategory={name} />
       <Footer />
-    </div>
+    </>
   );
 };
 
