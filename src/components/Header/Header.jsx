@@ -8,7 +8,7 @@ const Header = () => {
         <h1 className="mb-5 text-6xl text-center lg:text-left">
           Huge selection of delicious recipe ideas
         </h1>
-        <p className="mb-5 text-2xl font-light leading-8">
+        <p className="mb-5 text-2xl text-center lg:text-left">
           Explore our huge selection of delicious recipe ideas including; easy
           desserts, delicious vegan and vegetarian dinner ideas, gorgeous pasta
           recipes, quick bakes, family-friendly meals and gluten-free recipes.

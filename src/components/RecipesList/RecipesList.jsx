@@ -11,7 +11,6 @@ const RecipesList = ({ selectedCategory, selectedFilter, selectedSort }) => {
     setRange(range + 8);
   };
 
-  console.log(process.env);
   let url = `https://api.edamam.com/search?q&app_id=${process.env.REACT_APP_APP_ID}&app_key=${process.env.REACT_APP_APP_KEY}&cuisineType=${selectedCategory}&from=0&to=${range}`;
 
   if (selectedFilter) {
@@ -25,8 +24,6 @@ const RecipesList = ({ selectedCategory, selectedFilter, selectedSort }) => {
   if (selectedSort === "Latest Recipes") {
     url = `https://api.edamam.com/search?q=latest&app_id=${process.env.REACT_APP_APP_ID}&app_key=${process.env.REACT_APP_APP_KEY}&from=0&to=${range}`;
   }
-
-  console.log(selectedSort);
 
   const { data, error, loading } = useFetch(url, range);
 
