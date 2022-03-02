@@ -30,13 +30,40 @@ last thing install the dependencies in the root folder :
 > npm start 
 
 
-## Libraries/Frameworks
+## Application
 
+### ES6 + Features
+
+* Arrow Functions
+* Block-Scoped Variables Let and Const
+* async await with try/catch
+* Modules export/import
+* Destructuring Assignment
+
+
+### Libraries/Frameworks
+
+* firebase
 * react-router-dom
 * react-icons
 * react-toastify
 * tailwincss
 
+
+
+## Further Amendments to be made ?
+
+As a result of one week task i have completed the above mentioned task but in future i want to add some more features:
+
+1. Ability to make your diet program depend on Nutrients
+2. Make a database to store favorites list and user information 
+3. Ability to publish your own recipe
+
+## Note : 
+1. The API allow you to make 10 requests per minute.
+
+
+Please feel free to send me your feedback . I would love to hear from you . 
 
 
 
