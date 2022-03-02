@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Rubik:wght@300;500&display=swap");
+body {
+  font-family: "Montserrat", serif;
+  /* background-image: url("../public/img/i-like-food.svg"); */
+  background-color: #f8f8f8;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-nav {
+  background: #62a5a1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login,
+.logout {
+  background: #b54484;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.category-img {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 16);
+}
+
+.category-link {
+  transition: 250ms all;
+}
+
+.Breadcrumb:hover {
+  color: #62a5a1;
+}
+
+.filter-button {
+  transition: 500ms all;
+  background: #b6b6b6;
+}
+
+.filter-button:hover {
+  background: #62a5a1;
+}
+
+.cooking {
+  color: #a3865b;
+}
+
+.selected-category {
+  background: #62a5a1;
+}
+
+.recipe-img {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 16);
+}
+
+.view-more {
+  color: #62a5a1;
+  border: 2px solid #62a5a1;
+}
+
+.view-more:hover {
+  color: #fff;
+  background: #62a5a1;
+}
+
+.item {
+  transition: 250ms all;
+}
+
+.img-details {
+  border-bottom: solid 2px #cfb287;
+  width: 500px;
+  height: 500px;
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background: #a3865b;
+}
+
+.meal-type,
+.dish-type {
+  color: #a3865b;
+}
+
+.meal-type span,
+.dish-type span {
+  color: #000;
+}
+
+.nutrition {
+  border: solid 1px #000;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.popup-inner {
+  position: relative;
+  padding: 32px;
+  width: 100%;
+  max-width: 640px;
+  background-color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.close-Button {
+  position: absolute;
+  top: 0;
+  right: 16px;
+  font-weight: bold;
+  background: #62a5a1;
+}
+
+.login-btn {
+  background: #62a5a1;
+}
+
+.forget {
+  color: #62a5a1;
 }
