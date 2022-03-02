@@ -30,10 +30,15 @@ last thing install the dependencies in the root folder :
 > npm start 
 
 
+## Libraries/Frameworks
+
+* react-router-dom
+* react-icons
+* react-toastify
+* tailwincss
 
 
 
 
-API: <a href="https://developer.edamam.com/edamam-docs-recipe-api-v1">Edamam</a>
 
 
