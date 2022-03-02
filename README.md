@@ -60,7 +60,7 @@ As a result of one week task i have completed the above mentioned task but in fu
 3. Ability to publish your own recipe
 
 ## Note : 
-1. The API allow you to make 10 requests per minute.
+1. The API allow you to make 10 requests per minute :face_with_spiral_eyes:.
 
 
 Please feel free to send me your feedback . I would love to hear from you . 
