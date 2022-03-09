@@ -33,7 +33,7 @@ last thing install the dependencies in the root folder :
 ## Application
 
 ### Structure of src file
-
+```
 src
 ├── App.css
 ├── App.jsx
@@ -100,7 +100,7 @@ src
     ├── LatestRecipes.jsx
     ├── RandomRecipes.jsx
     └── RecipeDetailsPage.jsx
-
+```
 
 ### ES6 + Features
 
