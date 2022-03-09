@@ -32,6 +32,76 @@ last thing install the dependencies in the root folder :
 
 ## Application
 
+### Structure of src file
+
+src
+├── App.css
+├── App.jsx
+├── components
+│   ├── Breadcrumb
+│   │   └── Breadcrumb.jsx
+│   ├── CategoriesList
+│   │   ├── CategoriesList.jsx
+│   │   └── ctegoriesList.js
+│   ├── CategoryItem
+│   │   └── CategoryItem.jsx
+│   ├── FilteredRecipe
+│   │   ├── FilteredRecipe.jsx
+│   │   └── filter.js
+│   ├── Footer
+│   │   └── Footer.jsx
+│   ├── Header
+│   │   └── Header.jsx
+│   ├── Loading
+│   │   └── Loading.jsx
+│   ├── Login
+│   │   └── Login.jsx
+│   ├── Nav
+│   │   └── Nav.jsx
+│   ├── RecipeDetails
+│   │   ├── Line.jsx
+│   │   ├── RecipeDescription.jsx
+│   │   ├── RecipeDetails.jsx
+│   │   ├── RecipeFavButton.jsx
+│   │   ├── RecipeIngredients.jsx
+│   │   ├── RecipeNutritionItem.jsx
+│   │   └── RecipesNutrition.jsx
+│   ├── RecipeItem
+│   │   └── RecipeItem.jsx
+│   ├── RecipeSearch
+│   │   └── RecipeSearch.jsx
+│   ├── RecipesList
+│   │   └── RecipesList.jsx
+│   ├── ShowAll
+│   │   └── ShowAll.jsx
+│   ├── SignUpLogInForm
+│   │   ├── CloseFormButton.jsx
+│   │   ├── EmailAndPasswordInput.jsx
+│   │   ├── ForgetPassword.jsx
+│   │   ├── LoginAndSignUpForm.jsx
+│   │   ├── LoginSignupButton.jsx
+│   │   └── LoginSignupHeader.jsx
+│   └── ViewMoreButton
+│       └── ViewMore.jsx
+├── context
+│   ├── AuthContext.js
+│   └── FavoritesContext.js
+├── firebase
+│   └── firebase.js
+├── hooks
+│   └── useFetch.js
+├── index.css
+├── index.js
+└── pages
+    ├── CategoriesPage.jsx
+    ├── CategoryPage.jsx
+    ├── FavoritesPage.jsx
+    ├── HomePage.jsx
+    ├── LatestRecipes.jsx
+    ├── RandomRecipes.jsx
+    └── RecipeDetailsPage.jsx
+
+
 ### ES6 + Features
 
 * Arrow Functions
