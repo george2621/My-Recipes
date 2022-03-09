@@ -6,6 +6,8 @@ Recipes website depend on Edamam API that show you all the categories and help y
 search for any recipe and registe to make your favorites list in addition to show many 
 information about the recipe ex: (ingredients, Nutrients, calories, etc). 
 
+<img  src='img/home-page.jpg' >
+<p>&nbsp;</p>
 
 ## The SPA with 7 pages (routes):
 
