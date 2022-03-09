@@ -7,7 +7,6 @@ search for any recipe and registe to make your favorites list in addition to sho
 information about the recipe ex: (ingredients, Nutrients, calories, etc). 
 
 <img  src='./public/img/home-page.jpg' >
-<p>&nbsp;</p>
 
 ## The SPA with 7 pages (routes):
 
