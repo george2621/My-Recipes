@@ -3,7 +3,7 @@
 ## Description
 
 Recipes website depend on Edamam API that show you all the categories and help you to 
-search for any recipe and registe to make your favorites list in addition to show many 
+search for any recipe and register to make your favorites list in addition to show many 
 information about the recipe ex: (ingredients, Nutrients, calories, etc). 
 
 <img  src='./public/img/home-page.jpg' >
